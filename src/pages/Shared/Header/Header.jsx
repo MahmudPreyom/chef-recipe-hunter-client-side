@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <Container className="bg-light rounded">
             <Navbar bg="light">
-                <Navbar.Brand href="#home"><img src={rsz_two} alt="" /></Navbar.Brand>
+                <Navbar.Brand href="#home"><h4 className="rounded bg-dark text-warning fst-italic p-1 fw-bold">Chef-Corner</h4></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
