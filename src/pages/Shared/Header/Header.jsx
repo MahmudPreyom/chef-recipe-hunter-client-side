@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav, Button, Container, Navbar } from 'react-bootstrap'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import rsz_two from "../../../assets/rsz_two.png"
 
 //  <Navbar.Brand href="#home"><img src={rsz_two} alt="" /></Navbar.Brand> 
@@ -15,7 +15,7 @@ const Header = () => {
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>
                     </Nav>
-                    <Button variant="secondary">Login</Button>
+                    <Link to='/login'><Button variant="secondary">Login</Button></Link>
                 </Navbar.Collapse>
             </Navbar>
         </Container>
