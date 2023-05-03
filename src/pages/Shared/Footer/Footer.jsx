@@ -5,7 +5,7 @@ import rsz_two from "../../../assets/rsz_two.png"
 
 const Footer = () => {
     return (
-        <Container className="d-flex justify-content-between mt-5 bg-warning text-light p-4 align-items-center rounded">
+        <Container className="d-flex justify-content-between mt-3 bg-warning text-light p-4 align-items-center rounded">
             <div>
                 <img src={rsz_two} alt="" />
                 <p>You Might Be Rest Assured That We Have<br />A Strong Reputation About Our Chefs<br />Corner. We Can Provide The Best<br />Service All Over The Country.</p>
