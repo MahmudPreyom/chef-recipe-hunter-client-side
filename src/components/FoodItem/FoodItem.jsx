@@ -11,7 +11,7 @@ const FoodItem = ({ dishes }) => {
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
                     {description}
-                    <p>{rating}</p>
+                    <h6>{rating}</h6>
                 </Card.Text>
             </Card.Body>
         </Card>
