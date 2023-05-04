@@ -4,15 +4,20 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from "../../components/Provider/AuthProvider";
 
 const Register = () => {
-    const { createUser} = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState('')
 
-    const handleRegister = event =>{
+    const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
+        if (password.length < 6) {
+            setError('set 6 character')
+            return
+        }
 
         console.log(name, photo, email, password);
         createUser(email, password)
@@ -32,7 +37,7 @@ const Register = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" name="email" placeholder="Enter email" required/>
+                <Form.Control type="email" name="email" placeholder="Enter email" required />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
@@ -40,8 +45,9 @@ const Register = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Photo-Url</Form.Label>
-                <Form.Control type="text" name="photo" placeholder="Photo-Url" required/>
+                <Form.Control type="text" name="photo" placeholder="Photo-Url" required />
             </Form.Group>
+            <p><small className="text-danger">{error}</small></p>
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>

@@ -34,6 +34,7 @@ const Home = () => {
                 </div>
             </Container>
             <div>
+                <h2 className="text-center mt-5 mb-4">Our service</h2>
                 <CardGroup className="mt-3 mb-3 text-center gap-2">
                     <Card>
                         <FcOnlineSupport style={{ fontSize: '4rem' }} />
@@ -72,6 +73,7 @@ const Home = () => {
                 </CardGroup>
             </div>
             <div>
+                <h2 className="text-center mt-5 mb-4">Cooking Thrilling</h2>
                 <Carousel className="mb-5">
                     <Carousel.Item>
                         <img

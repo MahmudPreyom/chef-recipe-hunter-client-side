@@ -29,7 +29,7 @@ const Header = () => {
                     {user && <FaUserCircle style={{ fontSize: '2rem' }} />}
                     {user ? <Button onClick={handleLogOut} variant="secondary">Logout</Button> :
                         <Link to="/login"><Button variant="secondary">Login</Button></Link>}
-                    <Link href="/register"><Button>Register</Button></Link>
+                    <Link to="/register"><Button>Register</Button></Link>
                 </Navbar.Collapse>
             </Navbar>
         </Container>
