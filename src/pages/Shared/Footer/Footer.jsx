@@ -20,7 +20,7 @@ const Footer = () => {
                 <h4>Menu</h4>
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/blog">Blog</Nav.Link>
-                <Nav.Link href="#link">Hire</Nav.Link>
+                <Nav.Link href="*">Hire</Nav.Link>
             </div>
         </Container>
     );
