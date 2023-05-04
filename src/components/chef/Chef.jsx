@@ -14,7 +14,7 @@ const Chef = ({ chef }) => {
                 <h6>Recipe: {recipe}</h6>
                 <h6>Like: {like}</h6>
                 <h6>Experience: {experience}</h6>
-                <Link to={`/chefdetails/${id}`}><Button variant="primary">See More Details</Button></Link>
+                <Link to={`/chefdetails/${id}`}><Button variant="primary">Chefs Recipe</Button></Link>
             </Card.Body>
         </Card>
         </Container>

@@ -1,7 +1,9 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
+import { Card, CardGroup, Button, Container, Carousel } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import { useLoaderData } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FcOnlineSupport, FcInTransit, FcInfo } from "react-icons/fc";
 // import one from "../assets/one.png"
 import three from "../assets/three.png"
 import Chef from "../components/chef/Chef";
@@ -29,6 +31,85 @@ const Home = () => {
                     <img src={three} alt="" />
                 </div>
             </Container>
+            <div>
+                <CardGroup className="mt-3 mb-3 text-center gap-2">
+                    <Card>
+                        <FcOnlineSupport style={{ fontSize: '4rem' }} />
+                        <Card.Body className="bg-warning">
+                            <Card.Title>Online Contact</Card.Title>
+                            <Card.Text>
+                                <FaFacebook />
+                                <br />
+                                <FaTwitter />
+                                <br />
+                                <FaInstagram />
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card>
+                        <FcInTransit style={{ fontSize: '4rem' }} />
+                        <Card.Body className="bg-warning">
+                            <Card.Title>Food Delivery</Card.Title>
+                            <Card.Text>
+                                This card has supporting text below as a natural lead-in to
+                                additional content.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card>
+                        <FcInfo style={{ fontSize: '4rem' }} />
+                        <Card.Body className="bg-warning">
+                            <Card.Title>More Info</Card.Title>
+                            <Card.Text>
+                                This is a wider card with supporting text below as a natural lead-in
+                                to additional content. This card has even longer content than the
+                                first to show that equal height action.
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </CardGroup>
+            </div>
+            <div>
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=First slide&bg=373940"
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>First slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=Second slide&bg=282c34"
+                            alt="Second slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="holder.js/800x400?text=Third slide&bg=20232a"
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>
+                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
             <div>
                 {
                     chefs.map(chef => <Chef

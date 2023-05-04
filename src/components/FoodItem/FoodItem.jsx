@@ -1,8 +1,9 @@
 import React from "react";
+import { FaGrinHearts } from "react-icons/fa";
 import { Card, Container } from 'react-bootstrap'
 
 const FoodItem = ({ dishes }) => {
-    const { name, food_image, description,rating } = dishes;
+    const { name, food_image, description,rating, ingredients } = dishes;
     // console.log(dishes)
     return (
         <Card style={{ width: '18rem' }}>
@@ -10,8 +11,10 @@ const FoodItem = ({ dishes }) => {
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
-                    {description}
-                    <h6>{rating}</h6>
+                    <p><span className="fw-bold">Ingredients:</span> {ingredients}</p>
+                    <p><span className="fw-bold">Cooking Method:</span> {description}</p>
+                    <h6><span className="fw-bold">Rating:</span> {rating}</h6>
+                    <FaGrinHearts />
                 </Card.Text>
             </Card.Body>
         </Card>
