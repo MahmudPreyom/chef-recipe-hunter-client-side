@@ -115,6 +115,7 @@ const Home = () => {
                 </Carousel>
             </div>
             <div>
+                <h2 className="text-center text-primary mb-3">Chefs Corner</h2>
                 {
                     chefs.map(chef => <Chef
                         key={chef.id}
